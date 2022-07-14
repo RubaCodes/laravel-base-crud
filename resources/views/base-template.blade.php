@@ -8,6 +8,7 @@
     <title> @yield('page-title') Dc Comics</title>
 </head>
 <body>
+    @include('partials.navbar')
     <div class="container">
         @yield('page-content')
     </div>
