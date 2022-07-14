@@ -13,7 +13,7 @@
                 {{$comic->title}}  
             </h1>
             <p>{{$comic->description}}</p>
-            <span class="d-block"> Scrittori :{{$comic->artists}}</span>
+            <span class="d-block"> Scrittori :{{$comic->writers}}</span>
             <span class="d-block"> Artisti :{{$comic->artists}}</span>
             <div class="py-4">
                 <span class="px-2"> Prezzo: {{$comic->price}} $</span>
