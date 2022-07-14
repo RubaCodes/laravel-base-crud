@@ -10,7 +10,9 @@ Comics
     @foreach ($comics as $comic)
         <div class="col text-center border p-4 bg-danger">
             <img  src="{{$comic->thumb}}" alt="{{$comic->title}}">
-            <h3 class="text-white">{{$comic->title}}</h2>
+            <a href="{{ route('comics.show', $comic->id) }}">
+                <h3 class="text-white">{{$comic->title}}</h3>
+            </a>
         </div>
     @endforeach
   </div>
