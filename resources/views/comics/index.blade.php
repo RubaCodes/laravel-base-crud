@@ -25,12 +25,12 @@ Comics
             <td>{{$comic->series}}</td>
             <td>{{$comic->price}}$</td>
             <td>
-                <a href="{{route('comics.show', $comic->id)}}"><button class="btn btn-primary">More</button></a>
-                <a href="{{route('comics.edit', $comic->id)}}"><button class="btn btn-warning">Edit</button></a>
-                <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                <a class="d-block p-2" href="{{route('comics.show', $comic->id)}}"><button class="btn btn-primary w-100">More</button></a>
+                <a class="d-block p-2"href="{{route('comics.edit', $comic->id)}}"><button class="btn btn-warning w-100">Edit</button></a>
+                <form class="p-2" action="{{route('comics.destroy', $comic->id)}}" method="POST">
                   @csrf
                   @method('DELETE')
-                  <button type="submit" class="btn btn-danger">Delete</button>
+                  <button type="submit" class="btn btn-danger w-100">Delete</button>
                 </form>
             </td>
           </tr> 
