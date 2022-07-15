@@ -17,7 +17,7 @@ class CreateComicsTable extends Migration
             $table->id();
             $table->string('title', 100);
             $table->text('description')->default('descrizione');
-            $table->string('thumb', 200)->default('https://dummyimage.com/640x360/fff/aaa');
+            $table->string('thumb', 200)->default('https://dummyimage.com/640x360/fff/aaa')->nullable();
             $table->float('price', 5, 2)->default(0);
             $table->string('series', 100)->default('serie');
             $table->date('sale_date')->default(date('Y-m-d'));

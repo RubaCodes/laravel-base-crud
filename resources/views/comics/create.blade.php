@@ -14,7 +14,7 @@
     </div>
     <label class="mb-3" for="descrizione">Descrizione del Fumetto</label>
     <div class="form-floating mb-3">
-        <textarea name="description" class="form-control" id="descrizione" style="height: 100px">Descrivi il fumetto...</textarea>
+        <textarea name="description" class="form-control" id="descrizione" style="height: 100px" ></textarea>
     </div>
     <div class="mb-3">
         <label for="serie" class="form-label">Serie</label>
