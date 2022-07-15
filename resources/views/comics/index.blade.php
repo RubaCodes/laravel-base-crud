@@ -6,14 +6,31 @@ Comics
 
 @section('page-content')
 <h1 class="text-center">Elenco Comics DC</h1>
-<div class="row row-cols-4 border">
-    @foreach ($comics as $comic)
-        <div class="col text-center border p-4 bg-black">
-            <img  src="{{$comic->thumb}}" alt="{{$comic->title}}">
-            <a class="link-info" href="{{ route('comics.show', $comic->id) }}">
-                <h3 >{{$comic->title}}</h3>
-            </a>
-        </div>
-    @endforeach
-  </div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Titolo</th>
+        <th scope="col">Copertina</th>
+        <th scope="col">Serie</th>
+        <th scope="col">Prezzo</th>
+      </tr>
+    </thead>
+    <tbody>
+        @foreach ($comics as $comic)
+        <tr>
+            <th scope="row">{{$comic->id}}</th>
+            <td>{{$comic->title}}</td>
+            <td><img height="200" src="{{$comic->thumb}}" alt="{{$comic->title}}"></td>
+            <td>{{$comic->series}}</td>
+            <td>{{$comic->price}}$</td>
+            <td>
+                <a href="{{route('comics.show', $comic->id)}}"><button class="btn btn-primary">More</button></a>
+                <a href="{{route('comics.show', $comic->id)}}"><button class="btn btn-warning">Edit</button></a>
+                <a href="{{route('comics.show', $comic->id)}}"><button class="btn btn-danger">Delete</button></a>
+            </td>
+          </tr> 
+        @endforeach
+    </tbody>
+  </table>
 @endsection
