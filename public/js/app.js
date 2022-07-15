@@ -19378,7 +19378,20 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); /// codice per modale delete
+
+
+var idOne = document.querySelector("#button-1");
+var modalOne = document.querySelector(".modal-1");
+var reset_btn = document.querySelector("button.reset");
+idOne.addEventListener("click", function () {
+  modalOne.classList.remove("d-none");
+  modalOne.classList.add("d-block");
+});
+reset_btn.addEventListener("click", function () {
+  modalOne.classList.remove("d-block");
+  modalOne.classList.add("d-none");
+});
 
 /***/ }),
 

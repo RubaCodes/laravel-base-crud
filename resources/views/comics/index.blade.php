@@ -27,11 +27,16 @@ Comics
             <td>
                 <a class="d-block p-2" href="{{route('comics.show', $comic->id)}}"><button class="btn btn-primary w-100">More</button></a>
                 <a class="d-block p-2"href="{{route('comics.edit', $comic->id)}}"><button class="btn btn-warning w-100">Edit</button></a>
-                <form class="p-2" action="{{route('comics.destroy', $comic->id)}}" method="POST">
-                  @csrf
-                  @method('DELETE')
-                  <button type="submit" class="btn btn-danger w-100">Delete</button>
-                </form>
+                <button class="btn btn-danger w-100"id="button-{{$comic->id}}">Delete</button>
+                <div class="modal-{{$comic->id}} position-absolute top-50 start-50 translate-middle w-25 d-none bg-secondary p-4 border">
+                  <h2 class=" text-white">Sei sicuro di volte eliminare il record?</h2>
+                  <button class=" btn btn-primary w-100 my-2 border reset">Indietro</button>
+                  <form  action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger w-100 py-2 border">Cancella</button>
+                  </form>
+              </div>
             </td>
           </tr> 
         @endforeach

@@ -12,5 +12,6 @@
     <div class="container">
         @yield('page-content')
     </div>
+    <script src="../js/app.js"></script>
 </body>
 </html>
