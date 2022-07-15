@@ -6,8 +6,9 @@
 
 
 @section('page-content')
-<form class="p-4" action="{{route('comics.store')}}" method="POST">
+<form class="p-4" action="{{route('comics.update' , $comic->id)}}" method="POST">
     @csrf
+    @method('put')
     <div class="mb-3">
       <label for="titolo" class="form-label">Titolo del fumetto</label>
       <input name="title" type="text" class="form-control" value="{{$comic->title}}" id="titolo" >
